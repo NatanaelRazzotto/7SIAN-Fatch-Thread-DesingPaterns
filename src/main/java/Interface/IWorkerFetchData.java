@@ -1,10 +1,10 @@
 package Interface;
 
-import Principal.DTOData;
+import br.unibrasil.util.DTOData;
 
 public interface IWorkerFetchData {
 	
-	void setListPlaceHolderTodos(DTOData todosJSon);
+	void setListPlaceHolderDTOData(DTOData todosJSon);
 	boolean getContinua();
 	
 }

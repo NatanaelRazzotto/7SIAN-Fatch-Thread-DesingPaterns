@@ -1,7 +1,8 @@
 package br.unibrasil.Product.productAbstract;
 
-public interface ObjectData {
-	void listDados();
-	void getIdObject();
-	void getNomeObject();
+public interface ObjectData {	
+	
+	void listarDados();
+	int getIdObject();
+	String getNomeObject();
 }

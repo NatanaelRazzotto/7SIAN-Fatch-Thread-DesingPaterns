@@ -14,8 +14,8 @@ public class Todos implements ObjectData{
 		System.out.println("Um item Todo(s) Instanciado ");
 		
 	}
-	public void listDados() {
-		System.out.println("Listando ------------ ");
+	public void listarDados() {
+		System.out.println("------------Listando Todos------------ ");
 	
 		System.out.println((id != 0)?"Todos id: "+id:"???");
 		System.out.println((userId != 0)?"Usuario id associado: " +userId:"???");
@@ -23,12 +23,20 @@ public class Todos implements ObjectData{
 		System.out.println((completed != null && !completed.isEmpty())?"Completed: "+ completed:"???");
 
 	}
-	public void getIdObject() {
-		// TODO Auto-generated method stub
+	public int getIdObject() {
 		
+		System.out.println("--------- Todos------------ ");
+		System.out.println("Id Item Todos: "+ id);
+		System.out.println("UserId Associado a Todos: "+ userId);		
+		return id;		
 	}
-	public void getNomeObject() {
-		// TODO Auto-generated method stub
+
+	public String getNomeObject() {
+		System.out.println("--------- Todos------------ ");
+		System.out.println("Id Item Todos: "+ id);
+		System.out.println("UserId Associado a Todos: "+ userId);	
+		System.out.println("Titulo: "+ title);		
+		return title;		
 		
 	}
 

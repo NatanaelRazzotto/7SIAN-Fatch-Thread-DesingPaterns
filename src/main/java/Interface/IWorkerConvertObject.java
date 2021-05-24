@@ -1,10 +1,12 @@
 package Interface;
 
-import Principal.DTOData;
+import br.unibrasil.Product.productAbstract.ObjectData;
+import br.unibrasil.util.DTOData;
 
 public interface IWorkerConvertObject {
 
-	DTOData getElementListPlaceHolderTodos();
+	DTOData getElementListPlaceHolderDTOData();
+	void setListPlaceHolderObjectData(ObjectData objectData);
 	boolean getContinua();
 
 }

@@ -6,7 +6,7 @@ import br.unibrasil.Product.productAbstract.ObjectData;
 import br.unibrasil.Product.productConcrete.Todos;
 import br.unibrasil.factory.ConverterData;
 
-public class ConverterTodos extends ConverterData{
+public class ConverterTodo extends ConverterData{
 
 	@Override
 	public ObjectData createObjectData(String jsonString) {

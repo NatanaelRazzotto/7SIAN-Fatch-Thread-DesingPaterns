@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.Random;
 
 import Interface.IWorkerFetchData;
-import Principal.DTOData;
-import Principal.tipoURL;
 import ServiceApplication.Request;
+import br.unibrasil.util.DTOData;
+import br.unibrasil.util.tipoURL;
 import useCase.PlaceHolderUseCase;
 
 public class WorkerFetchData implements Runnable {
@@ -28,7 +28,7 @@ public class WorkerFetchData implements Runnable {
 			while (this.listPlaceHolderTodos.getContinua()) 
 			{			
 				DTOData data = new DTOData(tipoDataFetch, getContent());
-				this.listPlaceHolderTodos.setListPlaceHolderTodos(data);
+				this.listPlaceHolderTodos.setListPlaceHolderDTOData(data);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

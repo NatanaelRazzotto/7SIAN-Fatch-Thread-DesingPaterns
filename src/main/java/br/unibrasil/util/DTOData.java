@@ -1,4 +1,4 @@
-package Principal;
+package br.unibrasil.util;
 
 public class DTOData {
 	public tipoURL tipoDado;
@@ -8,7 +8,6 @@ public class DTOData {
 	{
 		this.tipoDado =tipoDado;
 		this.content = content;		
-	}
-	
+	}	
 	
 }

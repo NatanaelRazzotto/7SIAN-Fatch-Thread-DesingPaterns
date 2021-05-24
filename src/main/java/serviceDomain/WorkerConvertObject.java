@@ -3,12 +3,16 @@ package serviceDomain;
 import com.google.gson.Gson;
 
 import Interface.IWorkerConvertObject;
-import Principal.DTOData;
-import Principal.tipoURL;
 import br.unibrasil.Product.productAbstract.ObjectData;
 import br.unibrasil.factory.ConverterData;
-import br.unibrasil.factory.concrete.ConverterTodos;
+import br.unibrasil.factory.concrete.ConverterAlbum;
+import br.unibrasil.factory.concrete.ConverterComment;
+import br.unibrasil.factory.concrete.ConverterPhoto;
+import br.unibrasil.factory.concrete.ConverterPost;
+import br.unibrasil.factory.concrete.ConverterTodo;
 import br.unibrasil.factory.concrete.ConverterUser;
+import br.unibrasil.util.DTOData;
+import br.unibrasil.util.tipoURL;
 import useCase.PlaceHolderUseCase;
 
 public class WorkerConvertObject implements Runnable {
@@ -26,7 +30,7 @@ public class WorkerConvertObject implements Runnable {
 	public void run() {
 
 		while (this.accessPlaceHolderUseCase.getContinua()) {
-			DTOData todostJson = this.accessPlaceHolderUseCase.getElementListPlaceHolderTodos();	
+			DTOData todostJson = this.accessPlaceHolderUseCase.getElementListPlaceHolderDTOData();	
 			if (todostJson != null) {
 				
 				if (tipoObject == null)
@@ -41,9 +45,7 @@ public class WorkerConvertObject implements Runnable {
 				}				
 				
 				ObjectData objectData = fabrica.createObjectData(todostJson.content);
-				objectData.listDados();
-				System.out.println("Teste");
-
+				this.accessPlaceHolderUseCase.setListPlaceHolderObjectData(objectData);
 			}
 
 		}
@@ -53,21 +55,17 @@ public class WorkerConvertObject implements Runnable {
 		
 		switch (tipoObject) {
 		case TODOS:
-			return new ConverterTodos();
+			return new ConverterTodo();
 		case USERS:
 			return new ConverterUser();
 		case ALBUMS:
-			
-			break;
+			return new ConverterAlbum();
 		case PHOTOS:
-			
-			break;
+			return new ConverterPhoto();
 		case POST:
-			
-			break;
+			return new ConverterPost();
 		case COMMENTS:
-			
-			break;
+			return new ConverterComment();
 		}
 		return null;
 	}

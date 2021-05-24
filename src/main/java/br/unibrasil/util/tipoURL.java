@@ -1,4 +1,4 @@
-package Principal;
+package br.unibrasil.util;
 
 public enum tipoURL {
 	TODOS("todos/"),
