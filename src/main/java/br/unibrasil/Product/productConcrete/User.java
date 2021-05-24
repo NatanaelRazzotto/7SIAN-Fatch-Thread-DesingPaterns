@@ -16,11 +16,26 @@ public class User implements ObjectData{
 	 
 	public User ()
 	{
-		System.out.println("User");
-		
+		System.out.println("Um item User Instanciado ");		
 	}
 
 	public void listDados() {
+		System.out.println("Listando ------------ ");
+		System.out.println("Todos id: "+ id);
+		System.out.println("Nome: "+ name);
+		System.out.println("Usuario Nome: "+ username);
+		System.out.println("E-mail: "+ email);
+		System.out.println("Phone: "+ phone);
+		System.out.println("Website: "+ website);
+		
+	}
+
+	public void getIdObject() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void getNomeObject() {
 		// TODO Auto-generated method stub
 		
 	}

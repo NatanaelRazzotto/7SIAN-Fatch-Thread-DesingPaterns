@@ -1,8 +1,10 @@
 package Interface;
 
+import Principal.DTOData;
+
 public interface IWorkerConvertObject {
 
-	String getElementListPlaceHolderTodos();
+	DTOData getElementListPlaceHolderTodos();
 	boolean getContinua();
 
 }

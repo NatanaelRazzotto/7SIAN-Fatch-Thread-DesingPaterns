@@ -15,9 +15,4 @@ public class ConverterTodos extends ConverterData{
 		return todos;		
 	}
 
-	/*public void run() {
-		// TODO Auto-generated method stub
-		
-	}*/
-
 }
